@@ -19,3 +19,59 @@
 #o_result input, #d_result input {
   width: 48px;
 }
+
+#bmask > span {
+  display: block;
+}
+
+#bheika:before {
+  content: "兵科："
+}
+
+#bhp:before {
+  content: "ＨＰ："
+}
+
+#batk:before {
+  content: "攻撃力："
+}
+
+#bint:before {
+  content: "知力："
+}
+
+#bdef_ho:before {
+  content: "歩兵防御力："
+}
+
+#bdef_yari:before {
+  content: "槍兵防御力："
+}
+
+#bdef_yumi:before {
+  content: "弓兵防御力："
+}
+
+#bdef_uma:before {
+  content: "騎兵防御力："
+}
+
+#bspd:before {
+  content: "移速："
+}
+
+.bheika.yari:after {
+  content: "槍"
+}
+
+.bheika.uma:after {
+  content: "騎"
+}
+
+.bheika.yumi:after {
+  content: "弓"
+}
+
+.bheika.ho:after {
+  content: "歩"
+}
