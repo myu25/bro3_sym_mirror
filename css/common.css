@@ -1,0 +1,640 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-size:12px;
+	font-family:"メイリオ",Meiryo,"ＭＳ Ｐゴシック","ＭＳＰゴシック","MSPゴシック","MS Pゴシック","MS ゴシック","MS UI Gothic";
+	line-height:1.2em;
+	background-color:#003;
+}
+
+img {
+	border-width:0px;
+}
+
+a {
+	color:#39c;
+}
+a:hover {
+	text-decoration:underline;
+	color:#f96;
+}
+
+table {
+	border-collapse:collapse;
+}
+
+
+/*------------------------------	block_menu	------------------------------*/
+#block_menu {
+	padding:3px 0px;
+	width:100%;
+	font-size:120%;
+	color:#666;
+	background-color:#003;
+	background:-moz-linear-gradient(top, #669, #003);
+	background:-webkit-gradient(linear, left top, left bottom, from(#669), to(#003));
+	/*
+	z-index:999;
+	background:url(images/mbar_bg.png) repeat center bottom;
+	box-shadow:-5px 3px 5px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow:-5px 3px 5px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow:-5px 3px 5px rgba(0, 0, 0, 0.6);
+	*/
+}
+#block_menu a {
+	padding-right:0.5em;
+	color:#fff;
+}
+#block_menu a:hover	{
+	color:#6cf;
+}
+#block_menu a:active{
+	color:#06f;
+}
+#main_title a {
+	text-decoration:none;
+}
+#menu_links {
+	text-align:right;
+}
+
+
+/*------------------------------	block_main	------------------------------*/
+#block_main {
+	padding:10px 0;
+	background-color:#fff;
+}
+
+/*unselect*/
+#tag_cloud, .card_list, .sort_selector {
+	cursor:default;
+	-moz-user-select:none;
+	-khtml-user-select:none;
+	-webkit-user-select:none;
+	user-select:none;
+}
+
+#tag_cloud {
+	margin-bottom:2px;
+	cursor:default;
+}
+#tag_cloud li {
+	display:inline-block;
+    *display:inline;
+    *zoom:1;
+	border:2px solid #fff;
+	padding:0.2em 0.5em;
+	white-space:nowrap;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	cursor:pointer;
+}
+#tag_cloud .tag_group {
+	font-weight:bold;
+}
+#tag_cloud .tag {
+	color:#fff;
+	background-color:#999;
+	background:-moz-linear-gradient(top, #ddd, #999);
+	background:-webkit-gradient(linear, left top, left bottom, from(#ddd), to(#999));
+}
+#tag_cloud .selected {
+	background-color:#99f;
+	background:-moz-linear-gradient(top, #99f, #339);
+	background:-webkit-gradient(linear, left top, left bottom, from(#ccf), to(#66c));
+}
+#tag_cloud .unselected {
+	background-color:#f99;
+	background:-moz-linear-gradient(top, #f99, #933);
+	background:-webkit-gradient(linear, left top, left bottom, from(#f99), to(#933));
+	text-decoration:line-through;
+}
+#tag_cloud .overed {
+	border:2px solid #f96;
+}
+#tag_cloud a {
+	text-decoration:none;
+}
+#tag_cloud .tag_group a {
+	color:#000;
+}
+#tag_cloud .tag a {
+	color:#fff;
+}
+
+
+#mode_menu {
+	padding:0px 1em;
+	text-align:right;
+}
+#mode_menu li {
+	padding:2px 0.5em;
+	margin:0;
+	list-style:none;
+	display:inline-block;
+    *display:inline;
+    *zoom:1;
+	cursor:pointer;
+}
+#mode_menu .selected {
+	background-color:#963;
+	background:-moz-linear-gradient(top, #f96, #963);
+	background:-webkit-gradient(linear, left top, left bottom, from(#f96), to(#963));
+}
+#mode_menu a {
+	text-decoration:none;
+	color:#fff;
+}
+#mode_menu a:hover {
+	text-decoration:underline;
+	color:#f96;
+}
+
+
+.sort_selector {
+	width:100%;
+}
+.sort_selector td {
+	padding:1px;
+	text-align:center;
+	color:#fff;
+	background-color:#333;
+	background:-moz-linear-gradient(top, #999, #333);
+	background:-webkit-gradient(linear, left top, left bottom, from(#999), to(#333));
+	border-width:0 1px;
+	border-style:solid;
+	border-color:#999;
+	cursor:pointer;
+}
+.sort_selector .overed {
+	background-color:#f96;
+	background:-moz-linear-gradient(top, #f96, #963);
+	background:-webkit-gradient(linear, left top, left bottom, from(#f96), to(#963));
+}
+
+.card_list {
+	padding:3px;
+	height:350px;
+	border:1px #999 solid;
+	position:relative;
+	overflow-y:scroll;
+	cursor:default;
+}
+.card_list li {
+	padding:0;
+	margin:0;
+	border:2px #fff solid;
+	list-style:none;
+	display:inline-block;
+    *display:inline;
+    *zoom:1;
+	cursor:pointer;
+}
+.card_list_back {
+	position:absolute;
+	line-height:350px;
+	color:#eee;
+	font-size:100px;
+	text-align:center;
+}
+.card_list_sep {
+	line-height:1em;
+	color:#eee;
+	font-size:150%;
+	text-align:center
+}
+.card_list .selected {
+	border:2px #f00 solid;
+}
+
+.mini_card {
+	position:relative;
+	color:#fff;
+	height:122px;width:80px;
+}
+.mini_card span {
+	font-family:arial,helvetica;
+	position:absolute;
+	text-align:right;
+	font-size:9px;
+    line-height: 1;
+    word-wrap: break-word;
+}
+.mini_card .mini_card_atk {
+	top:102px;
+	right:48px;
+}
+.mini_card .mini_card_def {
+	top:102px;
+	right:22px;
+}
+.mini_card .mini_card_lv {
+	top:102px;
+	right:6px;
+}
+
+#deck li div {
+	visibility:hidden;
+	padding:5px;
+	text-align:center;
+	color:#fff;
+	background-color:rgba(0,0,0,0.5);
+	font-size:120%;
+}
+#deck .selected div {
+	visibility:visible;
+}
+#deck .selected div button {
+	margin:0 2px;
+	padding:0 5px;
+}
+
+
+#big_card {
+	position:relative;
+	height:368px;width:240px;
+	color:#fff;
+	font-size:120%;
+	background-image:url(/images/monster/card_brank.png);
+}
+#big_card_atk {
+	position:absolute;
+	top:312px;left:50px;
+}
+#big_card_def {
+	position:absolute;
+	top:312px;left:125px;
+}
+#big_card_lv {
+	position:absolute;
+	top:312px;left:195px;
+}
+
+#skill_info {
+	min-height:12em;
+	text-align:left;
+}
+#skill_info div {
+	padding:2px 0;
+	border-bottom:1px dashed #669;
+}
+#skill_info .zebra {
+}
+
+#card_info td {
+	text-align:left;
+}
+#deck_info td {
+	text-align:right;
+}
+#deck_info th {
+	text-align:left;
+}
+
+
+#short_url, #public_url, #sim_url {
+	width:140px;
+	margin-right:2px;
+}
+#short_url_select_btn, #public_url_select_btn, #sim_url_select_btn {
+	padding:1px 2px;
+	margin-right:2px;
+}
+#short_url_gen_btn, #public_url_load_btn, #sim_url_load_btn {
+	padding:1px 2px;
+}
+
+
+
+.ubox {
+	margin-bottom:4px;
+	padding:4px 2px;
+	text-align:center;
+	color:#fff;
+	background-color:#003;
+	background:-moz-linear-gradient(top, #336, #003);
+	background:-webkit-gradient(linear, left top, left bottom, from(#336), to(#003));
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+}
+.ubox .header {
+	margin-bottom:2px;
+	padding:2px 4px;
+	font-size:120%;
+	text-align:center;
+	border-bottom:2px #99c dashed;
+}
+.ubox table {
+	width:100%;
+}
+.ubox table td, .ubox table th {
+	padding:1px 4px;
+	text-align:center;
+	border-bottom:1px solid #336;
+}
+.ubox table th {
+	color:#669;
+	white-space:nowrap;
+}
+
+
+/*------------------------------	block_foot	------------------------------*/
+#block_foot {
+	padding:5px 0 0 0;
+	color:#ccc;
+	background:-moz-linear-gradient(top, #336, #003);
+	background:-webkit-gradient(linear, left top, left bottom, from(#336), to(#003));
+}
+
+#block_foot .threads_s .header {
+	margin-bottom:4px;
+	padding-bottom:4px;
+	font-size:120%;
+	border-bottom:1px #666 solid;
+}
+#block_foot .threads_s {
+	padding:4px 0;
+}
+#block_foot .threads_s li {
+	list-style:none;
+	line-height:1.2em;
+}
+#block_foot .threads_s .title {
+	float:left;
+}
+#block_foot .threads_s .update_at {
+	float:right;
+	white-space:nowrap;
+	font-size:9px;
+	color:#666;
+}
+#block_foot .threads_s .more_link {
+	text-align:right;
+}
+#block_foot .threads_s .clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+#copyrights {
+	text-align:right;
+	font-size:10px;
+}
+
+
+/*------------------------------	others		------------------------------*/
+
+/*	スレッド	*/
+.thread {
+	line-height:1.2em;
+}
+.thread_header h1 {
+	color:#cc4433;
+	font-size:200%;
+	line-height:2em;
+}
+.thread_header table {
+	width:100%;
+}
+.thread_header table td,
+.thread_header table th {
+	padding:1px 4px;
+	border-bottom:1px dotted #ddd;
+}
+.thread_header table th {
+	color:#ccc;
+	white-space:nowrap;
+}
+.thread_header table td {
+	font-size:120%;
+	line-height:2em;
+}
+
+.thread_body .block_comment {
+	margin-top:1em;
+	padding:5px 1em;
+	list-style:none;
+	border:1px solid #fdb;
+	/*
+	border-radius:16px;
+	-webkit-border-radius:16px;
+	-moz-border-radius:16px;
+*/
+}
+.thread_body .block_comment span {
+	color:#ccc;
+	font-size:80%;
+}
+.thread_body .block_comment .cno,
+.thread_body .block_comment .cname,
+.thread_body .block_comment .wtime,
+.thread_body .block_comment .eid {
+	margin-right:1em;
+	color:#112244;
+}
+.thread_body .block_comment .cno,
+.thread_body .block_comment .cname {
+	color:#cc4433;
+	font-weight:bold;
+	font-size:120%;
+}
+.thread_body .block_comment .comment {
+	padding:0.5em 0 1em 2em;
+	font-size:120%;
+	font-family:'ＭＳ Ｐゴシック','ＭＳＰゴシック','MSPゴシック','MS Pゴシック','MS ゴシック','MS UI Gothic';
+	word-break:break-all;
+}
+
+.reviews {
+	text-align:right;
+}
+.bad_btn,
+.good_btn {
+	margin:2px;
+	padding:1px 4px;
+	font-size:120%;
+}
+.bad_btn {
+	color:#900;
+}
+.good_btn {
+	color:#090;
+}
+
+
+/*	ページ	*/
+.pages {
+	margin-bottom:2em;
+	text-align:center;
+	line-height:2em;
+	font-size:180%;
+}
+.pages a {
+	border:2px solid transparent;
+}
+.pages a:hover {
+	border:2px solid #f63;
+	color:#f63;
+	text-decoration:none;
+}
+.pages .cur_page {
+	border:2px solid #f63;
+	color:#f63;
+}
+.pages .disable { color:#999; }
+.pages a, .pages span {
+	margin:0px 2px;
+	padding:2px 4px;
+	text-decoration:none;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+}
+
+
+/*	フォーム	*/
+form {
+	line-height:1.5;
+}
+form h2 {
+	line-height:2em;
+	color:#cc4433;
+	font-size:200%;
+}
+form div {
+	margin-top:5px;
+	margin-bottom:5px;
+}
+form label {
+	font-size:120%;
+}
+form input, form textarea {
+	font-size:120%;
+}
+form .submit_block {
+	text-align:right;
+}
+form .submit_block button {
+	padding:4px;
+	font-size:120%;
+}
+form .error { border-color:#f00; }
+form .failed_msg { padding:1em 0; text-align:center; color:#c00; font-size:150%; }
+form .succeed_msg { padding:1em 0; text-align:center; color:#090; font-size:150%; }
+
+
+/*	クリティカルのフローティング	*/
+#critical_viwer {
+	display:none;
+	position:absolute;
+	z-index:999;
+	padding:3px;
+	color:#fff;
+	background-color:#000;
+	font-size:12px;
+}
+
+
+/*	BBSのフローティング	*/
+#floating_card_info {
+	display:none;
+	position:absolute;
+	z-index:999;
+	padding:3px;
+	width:200px;
+	color:#fff;
+	background-color:#000;
+	font-size:12px;
+}
+#floating_card_info th, #floating_card_info td {
+	padding:2px;
+	border-bottom:1px solid #333;
+}
+#floating_card_info th {
+	vertical-align:bottom;
+	white-space:nowrap;
+	font-size:10px;
+	color:#666;
+}
+
+.included_deck .card_s {
+	display:inline-block;
+    *display:inline;
+    *zoom:1;
+	padding:0;margin:0;
+	width:66px !important;
+	height:100px !important;
+	background-repeat:no-repeat;
+	border:none;
+	-webkit-border-radius:0px;
+}
+
+
+/*	BBSのデッキラッパー	*/
+.deck_in_bbs {
+	text-align:center;
+}
+.deck_in_bbs ul {
+	text-align:left;
+}
+.deck_in_bbs a {
+	margin:0 1em;
+	line-height:1.2em;
+}
+
+
+/*	スレッドリスト大	*/
+.threads {
+	margin:0 auto;
+	padding:8px 0;
+	background-color:#fff;
+	border-width:0px;
+}
+.threads table { border-width:0px; width:100%; border-collapse:collapse; }
+.threads td { text-align:center; border-width:0px; }
+.threads tbody td { padding:0.2em; border-bottom:1px dashed #ccc; }
+.threads .ttitle { padding-left:8px; text-align:left; font-size:14px; }
+.threads .rn,
+.threads .utime { white-space:nowrap; }
+.threads th {
+	color:#999;
+	font-size:12px;
+	font-weight:normal;
+	white-space:nowrap;
+	text-align:center;
+	border-width:0 0 2px 0;
+}
+
+
+/*	ポリシー	*/
+#policy {
+}
+
+#policy h2 {
+	margin:0.5em 0;
+	font-size:200%;
+	line-height:1.2em;
+}
+#policy h3 {
+	margin:2em 0 0.5em 0;
+	font-size:150%;
+	line-height:1.2em;
+}
+#policy p {
+	margin:1em 0 1em 1em;
+	text-indent:1em;
+	line-height:1.2em;
+}
+#policy li {
+	margin:1em 0 1em 4em;
+	line-height:1.2em;
+}

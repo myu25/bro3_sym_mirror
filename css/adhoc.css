@@ -1,0 +1,21 @@
+#sim_menu {
+  display: inline-block;
+  vertical-align: top;
+  width: 122px;
+}
+
+#bushodas {
+  display: inline-block;
+  vertical-align: top;
+  width: 122pt;
+}
+
+#busho_inputs {
+  display: inline-block;
+  vertical-align: top;
+  width: 122px;
+}
+
+#o_result input, #d_result input {
+  width: 48px;
+}
